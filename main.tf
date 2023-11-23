@@ -120,7 +120,7 @@ resource "aws_security_group_rule" "jenkins_from_sonarqube" {
 resource "aws_instance" "jenkins" {
   ami = "ami-0efcece6bed30fd98"
   instance_type = "t2.small"
-  key_name = "techapp-key"
+  key_name = "key-us-west-2"
 
   vpc_security_group_ids = [aws_security_group.jenkins.id]
 
@@ -132,7 +132,7 @@ resource "aws_instance" "jenkins" {
 resource "aws_instance" "nexus" {
   ami = "ami-0c0d141edc4f470cc"
   instance_type = "t2.medium"
-  key_name = "techapp-key"
+  key_name = "key-us-west-2"
 
   vpc_security_group_ids = [aws_security_group.nexus.id]
 
@@ -144,7 +144,7 @@ resource "aws_instance" "nexus" {
 resource "aws_instance" "sonarqube" {
   ami = "ami-0efcece6bed30fd98"
   instance_type = "t2.medium"
-  key_name = "techapp-key"
+  key_name = "key-us-west-2"
 
   vpc_security_group_ids = [aws_security_group.sonarqube.id]
 
