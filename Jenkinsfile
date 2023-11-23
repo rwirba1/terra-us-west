@@ -2,7 +2,7 @@ pipeline {
     agent  { label 'node' } 
 
     parameters {
-        choice(name: 'TERRAFORM_ACTION', choices: ['init', 'plan', apply', 'destroy'], description: 'Select Terraform Action')
+        choice(name: 'TERRAFORM_ACTION', choices: ['init', 'plan', 'apply', 'destroy'], description: 'Select Terraform Action')
     }
 
     stages {
