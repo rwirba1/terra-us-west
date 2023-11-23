@@ -118,7 +118,7 @@ resource "aws_security_group_rule" "jenkins_from_sonarqube" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami = "ami-0fc5d935ebf8bc3bc"
+  ami = "ami-0efcece6bed30fd98"
   instance_type = "t2.small"
   key_name = "techapp-key"
 
@@ -130,7 +130,7 @@ resource "aws_instance" "jenkins" {
 }
 
 resource "aws_instance" "nexus" {
-  ami = "ami-0fa1ca9559f1892ec"
+  ami = "ami-0c0d141edc4f470cc"
   instance_type = "t2.medium"
   key_name = "techapp-key"
 
@@ -142,7 +142,7 @@ resource "aws_instance" "nexus" {
 }
 
 resource "aws_instance" "sonarqube" {
-  ami = "ami-06aa3f7caf3a30282"
+  ami = "ami-0efcece6bed30fd98"
   instance_type = "t2.medium"
   key_name = "techapp-key"
 
