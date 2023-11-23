@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 resource "aws_security_group" "jenkins" {
   name        = "jenkins-security-group"
 
